@@ -54,9 +54,9 @@ public class Main {
                     String nome = sc.nextLine();
                     System.out.print("Telefone: ");
                     String telefone = sc.nextLine();
-                    System.out.print("Veículo: ");
-                    String veiculo = sc.nextLine();
-                    Motoboy motoboy = motoboyService.cadastrarMotoboy(nome, telefone, veiculo);
+                    System.out.print("Placa do veiculo: ");
+                    String placaVeiculo = sc.nextLine();
+                    Motoboy motoboy = motoboyService.cadastrarMotoboy(nome, telefone, placaVeiculo);
                     System.out.println("Motoboy cadastrado: " + motoboy);
                 }
                 case 3 -> {

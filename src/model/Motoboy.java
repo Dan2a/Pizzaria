@@ -1,16 +1,13 @@
 package model;
 
-public class Motoboy {
+public class Motoboy extends Pessoa {
     private int id;
-    private String nome;
-    private String telefone;
-    private String veiculo;
+    private String placaVeiculo;
 
-    public Motoboy(int id, String nome, String telefone, String veiculo) {
+    public Motoboy(int id, String nome, String telefone, String placaVeiculo) {
+        super(nome, telefone);
         this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.veiculo = veiculo;
+        this.placaVeiculo = placaVeiculo;
     }
 
 
@@ -18,12 +15,8 @@ public class Motoboy {
         return id;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     @Override
     public String toString() {
-        return id + " - " + nome + " | Telefone " + telefone + " | Veículo: " + veiculo;
+        return id + " - " + getNome() + " | Telefone " + getTelefone() + " | Placa do Veículo: " + placaVeiculo;
     }
 }
